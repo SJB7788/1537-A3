@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const mongoose = require('mongoose');
 
 app.use(cors());
 
@@ -12,9 +11,9 @@ const unicornModel = require('./models/unicorns');
 app.post('/search', async (req, res) => {
   console.log(req.body);
   if (req.body.type === 'nameSearch') {
-    let seletctionArgument = {};
+    let selectionArgument = {};
     if (req.body.name) {
-      seletctionArgument = { name: req.body.name };
+      selectionArgument = { name: req.body.name };
     }
     let projectionArgument = {};
     if (
@@ -27,7 +26,7 @@ app.post('/search', async (req, res) => {
     }
 
     const result = await unicornModel.find(
-      seletctionArgument,
+      selectionArgument,
       projectionArgument
     );
     console.log(result);
