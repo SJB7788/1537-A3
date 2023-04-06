@@ -10,7 +10,7 @@ async function main() {
     'mongodb+srv://user1:5DmaMIzrFT77rCLT@cluster0.0c1wpzp.mongodb.net/?retryWrites=true&w=majority'
   );
 
-  app.listen(3000, () => {
+  app.listen(8080, () => {
     console.log('Server is running on port 3000');
   });
 }
