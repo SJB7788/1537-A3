@@ -30,6 +30,7 @@ app.post('/search', async (req, res) => {
       seletctionArgument,
       projectionArgument
     );
+    console.log(result);
     res.json(result);
   } else if (req.body.type === 'weightSearch') {
   } else if (req.body.type === 'foodSearch') {
