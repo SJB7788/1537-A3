@@ -20,7 +20,7 @@ app.post('/search', async (req, res) => {
       req.body.projectionFilters.name === true &&
       req.body.projectionFilters.weight === false
     ) {
-      projectionArgument = { weight: 1, _id: 0 };
+      projectionArgument = { name: 1, weight: 1, _id: 0 };
     } else {
       //Todo
     }
