@@ -10,7 +10,6 @@ const unicornModel = require("./models/unicorns");
 
 app.post("/search", async (req, res) => {
   // for name search
-  console.log(req.body);
   if (req.body.type === "nameSearch") {
     let selectionArgument = {};
     if (req.body.name) {
